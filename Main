@@ -1,0 +1,17 @@
+from telegram.ext import Updater, CommandHandler
+from bot import start , fact
+
+TOKEN = "1152154692:AAFjrd7G4Z56KW97kL56aLM8-LmSGQauYXM"
+
+
+def main():
+    updater = Updater(TOKEN, use_context=True)
+    dispatcher = updater.dispatcher
+    #Crea comando llamado start manejado por la funcion start
+    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(CommandHandler("fact", fact))
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()      

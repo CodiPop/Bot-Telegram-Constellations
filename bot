@@ -1,0 +1,11 @@
+
+def start(update, context):
+    update.message.reply_text("El bot de las constelaciones de discretas")
+
+def fact(update, context):
+
+    update.message.reply_text("1.")
+    update.message.reply_text("2")
+        
+
+
