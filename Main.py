@@ -10,7 +10,7 @@ def main():
     
     #Funciones
     dispatcher.add_handler(CommandHandler("start", bot.start))
-    dispatcher.add_handler(CommandHandler("fact", bot.fact))
+    dispatcher.add_handler(CommandHandler("help", bot.help))
     dispatcher.add_handler(CommandHandler("imagen", bot.imagen))
 
     #Incio bot
