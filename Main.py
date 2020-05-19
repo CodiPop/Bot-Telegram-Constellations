@@ -1,4 +1,5 @@
-from telegram.ext import Updater, CommandHandler
+from telegram.ext import Updater, CommandHandler, InlineQueryHandler 
+
 import bot
 
 TOKEN = "1152154692:AAFjrd7G4Z56KW97kL56aLM8-LmSGQauYXM"
@@ -12,6 +13,9 @@ def main():
     dispatcher.add_handler(CommandHandler("start", bot.start))
     dispatcher.add_handler(CommandHandler("help", bot.help))
     dispatcher.add_handler(CommandHandler("imagen", bot.imagen))
+    dispatcher.add_handler(InlineQueryHandler(bot.inline_query))
+    # Para el manejo de errores
+    dispatcher.add_error_handler(bot.error)
 
     #Incio bot
     updater.start_polling()
