@@ -1,4 +1,4 @@
-from telegram.ext import Updater, CommandHandler, InlineQueryHandler 
+from telegram.ext import Updater, CommandHandler, InlineQueryHandler,CallbackQueryHandler
 
 import bot
 
@@ -13,6 +13,8 @@ def main():
     dispatcher.add_handler(CommandHandler("start", bot.start))
     dispatcher.add_handler(CommandHandler("help", bot.help))
     dispatcher.add_handler(CommandHandler("imagen", bot.imagen))
+    dispatcher.add_handler(CommandHandler("sky", bot.sky))
+    updater.dispatcher.add_handler(CallbackQueryHandler(bot.button))
     dispatcher.add_handler(InlineQueryHandler(bot.inline_query))
     # Para el manejo de errores
     dispatcher.add_error_handler(bot.error)

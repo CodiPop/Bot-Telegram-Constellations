@@ -22,7 +22,7 @@ def start(update, context):
                 InlineKeyboardButton("Hydra", callback_data='6')],
 
                 [InlineKeyboardButton("Osa mayor", callback_data='7'),
-                InlineKeyboardButton("Osa menor", callback_data=8)]
+                InlineKeyboardButton("Osa menor", callback_data="8")]
                 
                 
                 ]
