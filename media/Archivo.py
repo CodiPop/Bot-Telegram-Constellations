@@ -6,7 +6,7 @@ fle = open("../estrellas/stars.txt","r")
 
 plt.style.use('dark_background')
 plt.figure(
-    figsize=(18, 12))
+    figsize=(50,50))
 
 cassiopea = {}
 cygnet = {}
@@ -45,7 +45,6 @@ def Firmamento(file):
         Estrellas.append(linea.strip())
     for i in range(len(Estrellas)):
         Estrellas[i] = Estrellas[i].split(' ')
-    print(len(Estrellas))
     for star in Estrellas:
         Coordenadas[star[3]] = (star[0], star[1])
         Magnitud[star[3]] = star[4]
@@ -75,15 +74,10 @@ def Constelaciones(file):
 
 
 def graficarEstrellas(coordenadas,Constelaciones,NombreEstrellas):
+    plt.figure(
+        figsize=(50, 50))
+    PlotStars(Coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
-
     for Constelacion in Constelaciones:
         xstart = []
         ystart = []
@@ -104,18 +98,15 @@ def graficarEstrellas(coordenadas,Constelaciones,NombreEstrellas):
         rgb = np.random.rand(3,)
         plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
 
+    plt.savefig('../media/Todaslasimage.jpg', dpi=100, bbox_inches='tight')
+    plt.show()
+
+
 def GraficarCasiopea(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -134,21 +125,14 @@ def GraficarCasiopea(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/casiopea.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/casiopea.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def GraficarCygnet(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -167,21 +151,14 @@ def GraficarCygnet(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/Cygnet.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/Cygnet.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def GraficarBoyero(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -200,21 +177,14 @@ def GraficarBoyero(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/Boyero.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/Boyero.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def Graficarcazo(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -233,21 +203,14 @@ def Graficarcazo(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/cazo.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/cazo.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def GraficarGeminis(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -266,21 +229,14 @@ def GraficarGeminis(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/Geminis.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/Geminis.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def GraficarHydra(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -299,21 +255,14 @@ def GraficarHydra(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/Hydra.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/Hydra.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def GraficarOsaMenor(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -332,21 +281,14 @@ def GraficarOsaMenor(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/OsaMenor.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/OsaMenor.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 def GraficarOsaMayor(coordenadas,Constelacion,NombreEstrellas):
     plt.figure(
-        figsize=(18, 12))
+        figsize=(50,50))
     PlotStars(coordenadas)
     plt.axis('off')
-    x = []
-    y = []
-    for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
-        x.append(float(coordenadas[star][0]))
-        y.append(float(coordenadas[star][1]))
-    print(x)
     xstart = []
     ystart = []
     xend = []
@@ -365,14 +307,12 @@ def GraficarOsaMayor(coordenadas,Constelacion,NombreEstrellas):
             yend.append(end_y)
     rgb = np.random.rand(3,)
     plt.plot(xstart,ystart,xend,yend,color=rgb ,marker ="o")
-    plt.savefig('../media/OsaMayor.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/OsaMayor.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
-
-
-
-def plot_plain_stars(coordenadas):
-    PlotStars(coordenadas)
+def GraficarSoloEstrellas(coordenadas):
+    plt.figure(
+        figsize=(50, 50))
     cont = 0
     x = []
     y = []
@@ -381,23 +321,19 @@ def plot_plain_stars(coordenadas):
         x.append(float(coordenadas[star][0]))
         y.append(float(coordenadas[star][1]))
         cont+=1
-    print(x)
     plt.scatter(x,y,c="w")
     plt.axis([-1,1,-1,1])
-    plt.savefig('../media/Todaslasimage.jpg', dpi=500, bbox_inches='tight')
+    plt.savefig('../media/SoloEstrella.jpg', dpi=100, bbox_inches='tight')
     plt.show()
 
 
 def PlotStars(coordenadas):
-    cont = 0
     x = []
     y = []
     for star in coordenadas:
-        # position turtle at the x and y coordinate for the star
         x.append(float(coordenadas[star][0]))
         y.append(float(coordenadas[star][1]))
-        cont += 1
-    print(x)
+
     plt.scatter(x, y, c="w")
 
 
@@ -419,9 +355,9 @@ OsaMayor = Constelaciones(OsaMayor_file)
 OsaMenor = Constelaciones(OsaMenor_file)
 
 misConstelaciones = [casiopea,Cygnet,Boyero,cazo,Geminis,Hydra,OsaMayor,OsaMenor]
-
+GraficarSoloEstrellas(Coordenadas)
 graficarEstrellas(Coordenadas,misConstelaciones,NombreEstrellas)
-plot_plain_stars(Coordenadas)
+
 GraficarCasiopea(Coordenadas,casiopea,NombreEstrellas)
 GraficarCygnet(Coordenadas,Cygnet,NombreEstrellas)
 GraficarBoyero(Coordenadas,Boyero,NombreEstrellas)
@@ -430,8 +366,6 @@ GraficarGeminis(Coordenadas,Geminis,NombreEstrellas)
 GraficarHydra(Coordenadas,Hydra,NombreEstrellas)
 GraficarOsaMayor(Coordenadas,OsaMayor,NombreEstrellas)
 GraficarOsaMenor(Coordenadas,OsaMenor,NombreEstrellas)
-
-
 
 
 
