@@ -33,8 +33,10 @@ def sky(update, context):
                 [InlineKeyboardButton("Geminis", callback_data='5'),
                 InlineKeyboardButton("Hydra", callback_data='6')],
 
-                [InlineKeyboardButton("Osa mayor", callback_data='7'),
-                InlineKeyboardButton("Osa menor", callback_data="8")]
+                [InlineKeyboardButton("Osa Mayor", callback_data='7'),
+                InlineKeyboardButton("Osa Menor", callback_data='8')],
+
+                [InlineKeyboardButton("Firmamento con constelaciones", callback_data='9')]
                 
                 
                 ]
@@ -55,13 +57,43 @@ def button(update, context):
         context.bot.send_photo(query.message.chat.id, photo=img)
         query.edit_message_text(text="Imagen seleccionada: Firmamento ")
     elif(int(query.data) == 1):
-        img = open('./media/boyero.jpeg', 'rb')
+        img = open('./media/boyero.jpg', 'rb')
         context.bot.send_photo(query.message.chat.id, photo=img)
         query.edit_message_text(text="Imagen seleccionada: Constelacion Boyero")
     elif(int(query.data) == 2):
-        img = open('./media/casiopea.jpeg', 'rb')
+        img = open('./media/casiopea.jpg', 'rb')
         context.bot.send_photo(query.message.chat.id, photo=img)
         query.edit_message_text(text="Imagen seleccionada: Constelacion Casiopea")
+    elif(int(query.data) == 3):
+        img = open('./media/cazo.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)
+        query.edit_message_text(text="Imagen seleccionada: Constelacion Cazo")
+    elif(int(query.data) == 4):
+        img = open('./media/cygnet.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)  
+        query.edit_message_text(text="Imagen seleccionada: Constelacion Cygnet")
+    elif(int(query.data) == 5):
+        img = open('./media/geminis.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)  
+        query.edit_message_text(text="Imagen seleccionada: Constelacion Geminis")
+    elif(int(query.data) == 6):
+        img = open('./media/hydra.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)  
+        query.edit_message_text(text="Imagen seleccionada: Constelacion Hydra")
+    elif(int(query.data) == 7):
+        img = open('./media/osaMayor.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)  
+        query.edit_message_text(text="Imagen seleccionada: Constelacion Osa Mayor")
+    elif(int(query.data) == 8):
+        img = open('./media/osaMenor.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)  
+        query.edit_message_text(text="Imagen seleccionada: Constelacion Osa Menor")
+    elif(int(query.data) == 9):
+        img = open('./media/firmamentocons.jpg', 'rb')
+        context.bot.send_photo(query.message.chat.id, photo=img)  
+        query.edit_message_text(text="Imagen seleccionada: Firmamento con constelaciones")
+
+
     
 
     print("mande imgen")
